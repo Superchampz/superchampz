@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<html>
+  <body>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "superchampz",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+    </script>
+  </body>
+</html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperChampz</title>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperChampz - Live Stream</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SuperChampz</h1>
+    </header>
+    <main>
+        <section id="stream">
+            <iframe
+                src="https://player.twitch.tv/?channel=superchampz&parent=localhost"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen="true"
+                height="450"
+                width="800">
+            </iframe>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 SuperChampz</p>
+    </footer>
+</body>
+</html>
+
