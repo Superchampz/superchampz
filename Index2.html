@@ -53,6 +53,39 @@
     <footer>
         <p>&copy; 2023 SuperChampz</p>
     </footer>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Visitas</title>
+</head>
+<body>
+
+<?php
+$contadorFile = 'contador.txt';
+
+// Verifica se o arquivo do contador existe
+if (!file_exists($contadorFile)) {
+    file_put_contents($contadorFile, 0);
+}
+
+// Lê o valor atual do contador
+$contador = (int) file_get_contents($contadorFile);
+
+// Incrementa o contador
+$contador++;
+
+// Atualiza o valor no arquivo
+file_put_contents($contadorFile, $contador);
+?>
+
+<h1>Bem-vindo!</h1>
+<p>Esta página foi visitada <?php echo $contador; ?> vezes.</p>
+
+</body>
+</html>
 </body>
 </html>
 
